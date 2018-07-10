@@ -6,6 +6,15 @@ public class Spiral {
 
 	public static void main(String[] args) {
 		// 1. Create a new Robot
+		Robot pop = new Robot();
+		pop.penDown();
+		pop.setSpeed(200);
+		for (int a = 0; a < 75; a++) {
+			pop.setRandomPenColor();
+			pop.move(5*a);
+			pop.turn(360/7);
+			pop.setPenWidth(a);
+		}
 		
 		// 5. Set your robot's pen down 
 		
