@@ -14,7 +14,10 @@ import javax.swing.JOptionPane;
 import org.jointheleague.graphical.robot.Robot;
 
 public class RobotTreasureHunt implements KeyEventDispatcher{
-
+int a = 0;
+	
+	
+	
 	// 1. Create a new mini robot (type "mini" inside the parentheses)
 	Robot mini = new Robot();
 	private void goUp() throws InterruptedException {
@@ -53,7 +56,15 @@ public class RobotTreasureHunt implements KeyEventDispatcher{
 		// 7. If robot is at same location as the little girl
 		if(robotXLocation == 720 && robotYLocation == 430) {
 JOptionPane.showMessageDialog(null, "Search near the skull...");
+a += 1;
 		}
+if(robotXLocation == 90 && robotYLocation == 40 && a == 1) {
+JOptionPane.showMessageDialog(null, "Here is your last clue, their loud, colorful, and sitting on a vine. Search near us and see what you will find...");
+a += 2;
+		}
+if(robotXLocation == 660 && robotYLocation == 130 && a == 2) {
+treasureFound();
+}
 		// 8. Give the user subsequent clues at different locations on the image
 		// (pirate robot, swamp, parrots, etc.)
 		
